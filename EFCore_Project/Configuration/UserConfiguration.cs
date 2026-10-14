@@ -1,0 +1,24 @@
+using EFCore_Project.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace EFCore_Project.Configuration;
+
+public class UserConfiguration:IEntityTypeConfiguration<User>
+{
+    public void Configure(EntityTypeBuilder<User> builder)
+    {
+        throw new NotImplementedException();
+        builder.Property(x => x.Id)
+            .ValueGeneratedNever()
+            .IsRequired();
+        builder.Property(x => x.Name)
+            .HasColumnType("VARCHAR")
+            .HasMaxLength(50).IsRequired();
+        builder.Property(x => x.Email)
+            .HasColumnType("varchar")
+            .HasMaxLength(200);
+        builder.Property(x => x.HashPassword)
+            .HasColumnType("VARCHAR(50)").IsRequired();
+    }
+}

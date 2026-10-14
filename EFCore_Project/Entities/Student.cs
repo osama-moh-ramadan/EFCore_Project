@@ -1,8 +1,8 @@
 namespace EFCore_Project.Entities;
 
-public class Student:User
+public class Student : User
 {
-    public int  Id { get; set; }
+    public int Id { get; set; }
 
     public Role Role
     {
