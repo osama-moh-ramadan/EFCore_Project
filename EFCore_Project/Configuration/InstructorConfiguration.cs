@@ -8,8 +8,7 @@ public class InstructorConfiguration:IEntityTypeConfiguration<Instructor>
 {
     public void Configure(EntityTypeBuilder<Instructor> builder)
     {
-        builder.Property(x => x.Id)
-            .IsRequired();
+   
         
     }
 }

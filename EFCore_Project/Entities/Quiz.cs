@@ -5,7 +5,9 @@ public class Quiz
     public int Id { get; set; }
     public string Title { get; set; }
     public int PassScore { get; set; }
-    public double Duration { get; set; }
-    public Course CourseId { get; set; }
+    public int Duration { get; set; }
+    public int CourseId { get; set; }
+    public Course Course { get; set; }
     public List<Question> Questions { get; set; }
+    public List<QuizAttempt> QuizAttempts { get; set; }
 }

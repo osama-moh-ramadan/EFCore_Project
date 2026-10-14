@@ -8,7 +8,7 @@ public class Course
     public string Name { get; set; }
     public double Price { get; set; }
     public double Hours { get; set; }
-    public Course PreRequired{ get; set; }
-    public Instructor InstructorId { get; set; }
-    public Category CategoryId { get; set; }
+    public int? PreRequiredCourseId{ get; set; }
+    public Course PreRequiredCourse { get; set; } = null!;
+    public List<Module> Modules { get; set; }
 }

@@ -10,11 +10,8 @@ public class AssignmentConfiguration:IEntityTypeConfiguration<Assignment>
     public void Configure(EntityTypeBuilder<Assignment> builder)
     {
         builder.ToTable("Assignments");
-        builder.Property(x => x.Id)
-            .IsRequired();
-        builder.Property(x => x.Feedback)
-            .HasColumnType("varchar")
-            .HasMaxLength(255);
+        builder.HasKey(x => x.Id);
+       
         
     }
 }

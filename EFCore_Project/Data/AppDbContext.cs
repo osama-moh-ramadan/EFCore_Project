@@ -20,7 +20,7 @@ public class AppDbContext:DbContext
     public DbSet<Question> Questions { get; set; }
     public DbSet<Quiz> Quizzes { get; set; }
     public DbSet<Student> Students { get; set; }
-    public DbSet<StudentAssignment> StudentAssignments { get; set; }
+    public DbSet<StudentSubmission> StudentAssignments { get; set; }
     public DbSet<User> Users { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

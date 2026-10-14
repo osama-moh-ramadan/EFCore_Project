@@ -9,8 +9,7 @@ public class CourseConfiguration:IEntityTypeConfiguration<Course>
     public void Configure(EntityTypeBuilder<Course> builder)
     {
         builder.ToTable("Courses");
-        builder.Property(x => x.Id)
-           .IsRequired();
+        builder.HasKey(x => x.Id);
         builder.Property(x => x.Name)
             .HasColumnType("VARCHAR")
             .HasMaxLength(50);

@@ -9,8 +9,7 @@ public class CertificateConfiguration:IEntityTypeConfiguration<Certificate>
     public void Configure(EntityTypeBuilder<Certificate> builder)
     {
         builder.ToTable("Certificate");
-        builder.Property(x => x.CertificateId)
-            .IsRequired();
-        
+        builder.HasKey(x => x.CertificateId);
+
     }
 }

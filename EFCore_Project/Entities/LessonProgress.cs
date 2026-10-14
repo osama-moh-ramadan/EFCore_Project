@@ -3,8 +3,9 @@ namespace EFCore_Project.Entities;
 public class LessonProgress
 {
     public int Id { get; set; }
-    public bool IsDone { get; set; }
-    public DateTime CompletedOn{get; set;}
-    public Student StudentId { get; set; }
-    public Lesson LessonId { get; set; }
+    public bool IsCompleted { get; set; }
+    public DateTime CompletedAt{get; set;}
+    public int StudentId { get; set; }
+    public int LessonId { get; set; }
+    public Lesson Lesson { get; set; } = null!;
 }

@@ -2,14 +2,17 @@ namespace EFCore_Project.Entities;
 
 public class Enrollment
 {
-    public Course CourseId { get; set; }
-    public Student StudentId { get; set; }
-    public Payment PaymentId { get; set; }
+    public int Id { get; set; }
+    public int CourseId { get; set; }
+    public int StudentId { get; set; }
+    public int? PaymentId { get; set; }
+    public Payment Payment { get; set; } = null!;
     public DateOnly ExpireDate { get; set; }
-    public enum Status
+    public EnrollmentStatus Status { get; set; }
+}
+    public enum EnrollmentStatus
     {
         Inprogress,
         Completed,
         HavenotEnrolled
     }
-}

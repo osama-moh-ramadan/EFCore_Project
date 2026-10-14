@@ -2,12 +2,12 @@ namespace EFCore_Project.Entities;
 
 public class Student : User
 {
-    public int Id { get; set; }
-
     public Role Role
     {
         get;
         set { Role = Role.Student; }
     }
-    public User userId { get; set; }
+    public List<Enrollment> Enrollments { get; set; }
+    public List<LessonProgress> LessonProgresses { get; set; }
+    public List<Certificate> Certificates { get; set; }
 }
