@@ -8,9 +8,8 @@ public class InstructorConfiguration:IEntityTypeConfiguration<Instructor>
 {
     public void Configure(EntityTypeBuilder<Instructor> builder)
     {
-        throw new NotImplementedException();
         builder.Property(x => x.Id)
-            .ValueGeneratedNever().IsRequired();
+            .IsRequired();
         
     }
 }

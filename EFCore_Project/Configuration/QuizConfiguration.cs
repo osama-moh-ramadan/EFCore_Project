@@ -8,10 +8,9 @@ public class QuizConfiguration:IEntityTypeConfiguration<Quiz>
 {
     public void Configure(EntityTypeBuilder<Quiz> builder)
     {
-        throw new NotImplementedException();
         builder.ToTable("Quizes");
         builder.Property(x => x.Id)
-            .ValueGeneratedNever().IsRequired();
+           .IsRequired();
         builder.Property(x => x.Title)
             .HasColumnType("VARCHAR")
             .HasMaxLength(50);

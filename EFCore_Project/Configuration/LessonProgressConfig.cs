@@ -8,9 +8,8 @@ public class LessonProgressConfig:IEntityTypeConfiguration<LessonProgress>
 {
     public void Configure(EntityTypeBuilder<LessonProgress> builder)
     {
-        throw new NotImplementedException();
         builder.Property(x => x.Id)
-            .ValueGeneratedNever().IsRequired();
+           .IsRequired();
         builder.ToTable("LessonProgress");
         
     }

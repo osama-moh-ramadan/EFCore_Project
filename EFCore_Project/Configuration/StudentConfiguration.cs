@@ -8,10 +8,9 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
 {
     public void Configure(EntityTypeBuilder<Student> builder)
     {
-        throw new NotImplementedException();
         builder.ToTable("Students");
         builder.Property(c => c.Id)
-            .ValueGeneratedNever().IsRequired();
+           .IsRequired();
         
 
 

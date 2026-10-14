@@ -8,10 +8,9 @@ public class CertificateConfiguration:IEntityTypeConfiguration<Certificate>
 {
     public void Configure(EntityTypeBuilder<Certificate> builder)
     {
-        throw new NotImplementedException();
         builder.ToTable("Certificate");
         builder.Property(x => x.CertificateId)
-            .ValueGeneratedNever().IsRequired();
+            .IsRequired();
         
     }
 }

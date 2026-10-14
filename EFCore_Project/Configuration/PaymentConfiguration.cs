@@ -8,10 +8,9 @@ public class PaymentConfiguration:IEntityTypeConfiguration<Payment>
 {
     public void Configure(EntityTypeBuilder<Payment> builder)
     {
-        throw new NotImplementedException();
         builder.ToTable("Payments");
         builder.Property(x => x.Id)
-            .ValueGeneratedNever().IsRequired();
+            .IsRequired();
         builder.Property(x => x.IsDone)
             .IsRequired();
     }

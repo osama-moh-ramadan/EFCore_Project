@@ -8,10 +8,9 @@ public class LessonConfiguration:IEntityTypeConfiguration<Lesson>
 {
     public void Configure(EntityTypeBuilder<Lesson> builder)
     {
-        throw new NotImplementedException();
         builder.ToTable("Lessons");
         builder.Property(x => x.Id)
-            .ValueGeneratedNever().IsRequired();
+           .IsRequired();
         builder.Property(x => x.Name)
             .HasColumnType("VARCHAR").HasMaxLength(50);
         

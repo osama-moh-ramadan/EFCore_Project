@@ -8,9 +8,8 @@ public class QuestionConfiguration:IEntityTypeConfiguration<Question>
 {
     public void Configure(EntityTypeBuilder<Question> builder)
     {
-        throw new NotImplementedException();
         builder.Property(x => x.Id)
-            .ValueGeneratedNever().IsRequired();
+           .IsRequired();
         builder.Property(x => x.CorrectAnswer)
             .HasColumnType("CHAR");
         builder.Property(x => x.Text)

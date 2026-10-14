@@ -8,9 +8,7 @@ public class UserConfiguration:IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        throw new NotImplementedException();
         builder.Property(x => x.Id)
-            .ValueGeneratedNever()
             .IsRequired();
         builder.Property(x => x.Name)
             .HasColumnType("VARCHAR")
