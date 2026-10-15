@@ -18,5 +18,6 @@ public class UserConfiguration:IEntityTypeConfiguration<User>
             .HasMaxLength(200);
         builder.Property(x => x.HashPassword)
             .HasColumnType("VARCHAR(50)").IsRequired();
+        
     }
 }

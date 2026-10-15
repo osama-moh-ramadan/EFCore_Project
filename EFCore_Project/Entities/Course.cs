@@ -10,5 +10,12 @@ public class Course
     public double Hours { get; set; }
     public int? PreRequiredCourseId{ get; set; }
     public Course PreRequiredCourse { get; set; } = null!;
+    public int? InstructorId { get; set; }
+    public Instructor Instructor { get; set; }
+    public int? CategoryId { get; set; }
+    public Category? Category { get; set; }
     public List<Module> Modules { get; set; }
+    public List<Assignment>? Assignment { get; set; }
+    public List<Quiz> Quizzes { get; set; }
+    public Certificate? Certificate { get; set; }
 }

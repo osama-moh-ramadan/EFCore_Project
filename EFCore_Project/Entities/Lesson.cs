@@ -10,8 +10,7 @@ public class Lesson
     public int DurationMinutes { get; set; }
     public int OrderIndex { get; set; }
     public Module Module { get; set; } = null!;
-    
-    public List<LessonProgress> LessonProgresses { get; set; }
+    public List<LessonProgress>? LessonProgress { get; set; }
 }public enum  LessonType
 {
     Video,PDF,Article

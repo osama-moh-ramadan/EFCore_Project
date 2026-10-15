@@ -16,6 +16,9 @@ public class QuizConfiguration:IEntityTypeConfiguration<Quiz>
             .HasMaxLength(50);
         builder.Property(x => x.Duration)
             .HasColumnType("DECIMAL");
+        builder.HasOne(x => x.Course)
+            .WithMany(x=>x.Quizzes)
+            .HasForeignKey(x=>x.CourseId);
         
     }
 }

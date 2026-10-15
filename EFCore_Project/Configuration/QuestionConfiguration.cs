@@ -8,13 +8,15 @@ public class QuestionConfiguration:IEntityTypeConfiguration<Question>
 {
     public void Configure(EntityTypeBuilder<Question> builder)
     {
-        builder.Property(x => x.Id)
-           .IsRequired();
-        builder.Property(x => x.CorrectAnswer)
+       builder.Property(x => x.CorrectAnswer)
             .HasColumnType("CHAR");
         builder.Property(x => x.Text)
             .HasColumnType("NVARCHAR")
             .HasMaxLength(250);
         builder.ToTable("Questions");
+        builder.HasKey(x => x.Id);
+        builder.HasOne(x=>x.Quiz)
+            .WithMany(x=>x.Questions)
+            .HasForeignKey(x=>x.QuizId);
     }
 }

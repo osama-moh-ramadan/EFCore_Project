@@ -8,8 +8,14 @@ public class CertificateConfiguration:IEntityTypeConfiguration<Certificate>
 {
     public void Configure(EntityTypeBuilder<Certificate> builder)
     {
-        builder.ToTable("Certificate");
+        builder.ToTable("Certificates");
         builder.HasKey(x => x.CertificateId);
+        builder.HasOne(x => x.Student)
+            .WithMany(x => x.Certificates)
+            .HasForeignKey(x => x.StudentId);
+        builder.HasOne(x => x.Course)
+            .WithOne(x => x.Certificate);
+        
 
     }
 }

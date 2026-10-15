@@ -14,6 +14,11 @@ public class ModuleConfiguration:IEntityTypeConfiguration<Entities.Module>
            .IsRequired();
         builder.Property(x => x.Name)
             .HasColumnType("VARCHAR").HasMaxLength(50);
-        
+        builder.HasOne(x => x.Course)
+            .WithMany(x => x.Modules).HasForeignKey(f => f.CourseId);
+        builder.HasMany(x=>x.Lessons)
+            .WithOne(x=>x.Module).HasForeignKey(x=>x.ModuleId);
+            
+
     }
 }
