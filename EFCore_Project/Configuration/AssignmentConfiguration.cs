@@ -12,7 +12,7 @@ public class AssignmentConfiguration:IEntityTypeConfiguration<Assignment>
         builder.ToTable("Assignments");
         builder.HasKey(x => x.Id);
         builder.HasOne(x=>x.Course)
-            .WithMany(x=>x.Assignment).HasForeignKey(f=>f.CourseId);
+            .WithMany(x=>x.Assignments).HasForeignKey(f=>f.CourseId);
         builder.HasOne(x=>x.Instructor)
             .WithMany(x=>x.Assignments).HasForeignKey(f=>f.InstructorId);
        

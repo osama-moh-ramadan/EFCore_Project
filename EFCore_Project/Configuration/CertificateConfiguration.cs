@@ -14,8 +14,7 @@ public class CertificateConfiguration:IEntityTypeConfiguration<Certificate>
             .WithMany(x => x.Certificates)
             .HasForeignKey(x => x.StudentId);
         builder.HasOne(x => x.Course)
-            .WithOne(x => x.Certificate);
+            .WithMany(x=>x.Certificates);
         
-
     }
 }

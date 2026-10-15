@@ -15,8 +15,9 @@ public class Course
     public int? CategoryId { get; set; }
     public Category? Category { get; set; }
     public List<Module> Modules { get; set; }
-    public List<Assignment>? Assignment { get; set; }
+    public List<Assignment>? Assignments { get; set; }
     public List<Quiz> Quizzes { get; set; }
     public List<Enrollment> Enrollments { get; set; }
+    public List<Certificate>? Certificates { get; set; }
     public Certificate? Certificate { get; set; }
 }

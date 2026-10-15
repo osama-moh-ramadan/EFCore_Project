@@ -15,7 +15,7 @@ public class LessonProgressConfig:IEntityTypeConfiguration<LessonProgress>
             .WithMany(x=>x.LessonProgresses)
             .HasForeignKey(f=>f.StudentId);
         builder.HasOne(x=>x.Lesson)
-            .WithMany(x=>x.LessonProgress)
+            .WithMany(x=>x.LessonProgresses)
             .HasForeignKey(f=>f.LessonId);
         
     }

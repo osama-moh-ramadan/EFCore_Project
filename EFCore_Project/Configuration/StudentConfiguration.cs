@@ -9,9 +9,8 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
     public void Configure(EntityTypeBuilder<Student> builder)
     {
         builder.ToTable("Students");
-        builder.Property(c => c.Id)
-           .IsRequired();
-        
+        builder.Property(x => x.Id).ValueGeneratedOnAdd();
+        builder.HasKey(c=>c.Id);
 
 
     }
