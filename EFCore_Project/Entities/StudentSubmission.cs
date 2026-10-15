@@ -9,4 +9,6 @@ public class StudentSubmission
     public int StudentId { get; set; }
     public int AssignmentId { get; set; }
     public string? Feedback { get; set; }
+    public Student Student { get; set; }
+    public Assignment Assignment { get; set; }
 }

@@ -9,6 +9,8 @@ public class Enrollment
     public Payment Payment { get; set; } = null!;
     public DateOnly ExpireDate { get; set; }
     public EnrollmentStatus Status { get; set; }
+    public Course Course { get; set; }
+    public Student Student { get; set; }
 }
     public enum EnrollmentStatus
     {

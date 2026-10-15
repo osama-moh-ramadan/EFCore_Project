@@ -1,5 +1,11 @@
 namespace EFCore_Project.Entities;
 
+    public enum Role
+    {
+        Student,
+        Instructor,
+        Admin
+    }
 public class User
 {
     public int Id { get; set; }
@@ -9,9 +15,3 @@ public class User
     public Role Role { get; set; }
     public bool IsDeleted { get; set; }
 }
-    public enum Role
-    {
-        Student,
-        Instructor,
-        Admin
-    }
