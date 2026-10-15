@@ -17,5 +17,6 @@ public class Course
     public List<Module> Modules { get; set; }
     public List<Assignment>? Assignment { get; set; }
     public List<Quiz> Quizzes { get; set; }
+    public List<Enrollment> Enrollments { get; set; }
     public Certificate? Certificate { get; set; }
 }
