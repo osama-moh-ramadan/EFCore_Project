@@ -6,10 +6,12 @@ public class User
     public string Name { get; set; }
     public string Email { get; set; }
     public string HashPassword { get; set; }
+    public Role Role { get; set; }
+    public bool IsDeleted { get; set; }
+}
     public enum Role
     {
         Student,
         Instructor,
         Admin
     }
-}

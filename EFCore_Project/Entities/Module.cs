@@ -4,5 +4,8 @@ public class Module
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public Course CourseId { get; set; }
+    public int OrderIndex { get; set; }
+    public Course Course { get; set; }
+    public int CourseId { get; set; }
+    public List<Lesson> Lessons { get; set; }
 }

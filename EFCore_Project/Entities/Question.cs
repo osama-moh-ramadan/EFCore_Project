@@ -4,12 +4,15 @@ public class Question
 {
     public int Id { get; set; }
     public string Text { get; set; }
-    public char CorrectAnswer { get; set; }
-    public Quiz QuizId { get; set; }
+    public string CorrectAnswer { get; set; }
+    public string? Options { get; set; }
+    public int QuizId { get; set; }
+    public Quiz Quiz { get; set; }
+    public QuestionType QuestionType { get; set; }
 
-    public enum Type
+}
+    public enum QuestionType
     {
         MCQ,
         TrueFalse
     }
-}
