@@ -17,6 +17,7 @@ public class LessonProgressConfig:IEntityTypeConfiguration<LessonProgress>
         builder.HasOne(x=>x.Lesson)
             .WithMany(x=>x.LessonProgresses)
             .HasForeignKey(f=>f.LessonId);
+        builder.HasIndex(x=>new{x.StudentId,x.LessonId}).IsUnique();
         
     }
 }
