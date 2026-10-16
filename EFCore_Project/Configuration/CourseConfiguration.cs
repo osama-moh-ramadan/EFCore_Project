@@ -14,7 +14,7 @@ public class CourseConfiguration:IEntityTypeConfiguration<Course>
             .HasColumnType("VARCHAR")
             .HasMaxLength(50);
         builder.Property(x => x.Hours)
-            .HasColumnType("Decimal").IsRequired();
+            .HasColumnType("int").IsRequired();
         builder.HasOne(x=>x.Instructor)
             .WithMany(x=>x.Courses)
             .HasForeignKey(x=>x.InstructorId)

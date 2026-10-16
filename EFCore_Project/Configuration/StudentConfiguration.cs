@@ -11,7 +11,6 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
         builder.ToTable("Students");
         builder.Property(x => x.Id).ValueGeneratedOnAdd();
         builder.HasKey(c=>c.Id);
-
-
+        
     }
 }
