@@ -15,5 +15,8 @@ public class CategoryConfiguration:IEntityTypeConfiguration<Category>
             .HasMaxLength(50)
             .IsRequired();
         builder.ToTable("Categories");
+        builder.HasMany(x => x.Courses)
+            .WithOne(x => x.Category)
+            .HasForeignKey(x => x.CategoryId);
     }
 }

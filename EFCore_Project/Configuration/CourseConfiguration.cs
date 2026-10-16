@@ -14,14 +14,11 @@ public class CourseConfiguration:IEntityTypeConfiguration<Course>
             .HasColumnType("VARCHAR")
             .HasMaxLength(50);
         builder.Property(x => x.Hours)
-            .HasColumnType("int").IsRequired();
+            .HasColumnType("decimal(5,2)").IsRequired();
         builder.HasOne(x=>x.Instructor)
             .WithMany(x=>x.Courses)
             .HasForeignKey(x=>x.InstructorId)
             .OnDelete(DeleteBehavior.Restrict);
-        builder.HasOne(x => x.Category)
-            .WithMany()
-            .HasForeignKey(y=>y.CategoryId);
         builder.HasOne(c => c.PreRequiredCourse)
             .WithMany()
             .HasForeignKey(c => c.PreRequiredCourseId)

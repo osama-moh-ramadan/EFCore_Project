@@ -15,7 +15,7 @@ public class QuizConfiguration:IEntityTypeConfiguration<Quiz>
             .HasColumnType("VARCHAR")
             .HasMaxLength(50);
         builder.Property(x => x.Duration)
-            .HasColumnType("DECIMAL");
+            .HasColumnType("int");
         builder.HasOne(x => x.Course)
             .WithMany(x=>x.Quizzes)
             .HasForeignKey(x=>x.CourseId);

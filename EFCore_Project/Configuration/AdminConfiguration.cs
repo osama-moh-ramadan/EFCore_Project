@@ -9,7 +9,5 @@ public class AdminConfiguration:IEntityTypeConfiguration<Admin>
     public void Configure(EntityTypeBuilder<Admin> builder)
     {
         builder.ToTable("Admins");
-        builder.HasKey(x=>x.Id);
-        builder.Property(x => x.Id).ValueGeneratedOnAdd();
     }
 }
